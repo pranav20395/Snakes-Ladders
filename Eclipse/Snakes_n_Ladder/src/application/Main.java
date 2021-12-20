@@ -26,7 +26,7 @@ public class Main extends Application {
 			Stage.setTitle("Snakes & Ladders");
 			Image logo = new Image("game.png");
 			Stage.getIcons().add(logo);
-			
+			//Stage.setFullScreen(true);
 			Stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

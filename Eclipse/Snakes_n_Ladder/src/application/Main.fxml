@@ -13,5 +13,15 @@
          </image>
       </ImageView>
       <Button layoutX="254.0" layoutY="504.0" mnemonicParsing="false" onAction="#dice" text="Roll" />
+      <ImageView fitHeight="47.0" fitWidth="67.0" layoutX="-19.0" layoutY="457.0">
+         <image>
+            <Image url="@green-01.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="67.0" layoutX="10.0" layoutY="457.0">
+         <image>
+            <Image url="@blue-01.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

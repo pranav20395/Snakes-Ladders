@@ -20,6 +20,7 @@ public class Controller {
 		System.out.println("hI");
 	}
 	int num = 0;
+	int in=0;
 	@FXML
 	void dice() {
 		Thread dicet = new Thread() {
@@ -33,7 +34,10 @@ public class Controller {
 						Thread.sleep(100);
 						System.out.println(num);
 					}
-					inboard();
+					if(in==0) {
+						inboard();
+					}
+					in+=1;
 					for(int j=0;j<num;j++){
 
 						skiph();

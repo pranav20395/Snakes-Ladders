@@ -38,7 +38,7 @@ public class Controller {
 			public void run() {
 				try {
 					for ( int i  =0 ; i <num ; i++) {
-						System.out.println(num);
+						System.out.println(num );
 						skiph();
 						Thread.sleep(500);
 					}

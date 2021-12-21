@@ -20,7 +20,7 @@ public class Main extends Application {
 	public void start(Stage Stage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-			Scene scene = new Scene(root,600,400);
+			Scene scene = new Scene(root,392,568);
 			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
 			Stage.setScene(scene);
 			Stage.setTitle("Snakes & Ladders");
@@ -31,6 +31,8 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		int turn = 0;    //1 for green and 0 for blue
+
 	}
 
 	

@@ -34,6 +34,7 @@ public class Main extends Application {
 		int turn = 0;    //1 for green and 0 for blue
 
 	}
+	
 
 	
 	public static void main(String[] args) {

@@ -3,6 +3,7 @@ import java.io.File;
 import java.util.*;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -21,9 +22,42 @@ public class Controller {
 	}
 	int num = 0;
 	int in=0;
+	
 	@FXML
-	void dice() {
+	void dice_run() {
+		try {
+			dice();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		if ( in == 0) inboard();
+		in++;
+		System.out.println("--"+num);
+		Thread goti_thread = new Thread(){
+			public void run() {
+				try {
+					for ( int i  =0 ; i <num ; i++) {
+						System.out.println(num);
+						skiph();
+						Thread.sleep(500);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		goti_thread.start();
+		
+		
+	}
+	
+	
+	
+	@FXML
+	void dice() throws InterruptedException {
 		Thread dicet = new Thread() {
+			
 			public void run() {
 				try {
 					for (int j = 0; j < 8; j++) {
@@ -31,17 +65,10 @@ public class Controller {
 						num = ran.nextInt(6) + 1;
 						File f = new File("src/application/dice"+num+".png");
 						diceview.setImage(new Image(f.toURI().toString()));
-						Thread.sleep(100);
-						System.out.println(num);
+						Thread.sleep(50);
+						//System.out.println(num);
 					}
-					if(in==0) {
-						inboard();
-					}
-					in+=1;
-					for(int j=0;j<num;j++){
-
-						skiph();
-					}
+					
 
 				} catch (
 						Exception e) {
@@ -53,8 +80,13 @@ public class Controller {
 
 		};
 		dicet.start();
+		
+		dicet.sleep(800);
+		
+		System.out.println("--"+num+"--");
 	}
 
+	//--------------------------------------------
 	@FXML
 	void inboard(){
 

@@ -21,9 +21,11 @@ public class Main extends Application {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 			Scene scene = new Scene(root,392,568);
+			
 			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
 			Stage.setScene(scene);
 			Stage.setTitle("Snakes & Ladders");
+			//Stage.setResizable(false);
 			Image logo = new Image("game.png");
 			Stage.getIcons().add(logo);
 			//Stage.setFullScreen(true);

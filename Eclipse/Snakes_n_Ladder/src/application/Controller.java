@@ -31,6 +31,7 @@ public class Controller {
 	int p1_pos =1;
 	int p2_pos =1;
 	int yaxis_counter = 1;
+	int yaxis_counter2 = 1;
 	int limit=11;
 	
 	@FXML
@@ -55,35 +56,26 @@ public class Controller {
 						public void run() {
 							try {
 								for ( int i  =0 ; i <num ; i++) {
-									//System.out.println(num );
 									
-									/*
-									 * p1_pos ++;
-									 * 
-									 * if ( yaxis_counter %2 != 0) {skiph();} if (p1_pos == 11 || p1_pos == 20 ||
-									 * p1_pos == 30 || p1_pos == 40 || p1_pos == 50 || p1_pos == 60 || p1_pos == 70
-									 * || p1_pos == 80 || p1_pos == 90 || p1_pos == 100 ) { //Thread.sleep(500);
-									 * //Thread.sleep(500); yUp_green(); yaxis_counter++; continue; } if (
-									 * yaxis_counter %2 == 0) {nskiph();}
-									 * 
-									 * System.out.println(p1_pos);
-									 * 
-									 * 
-									 * Thread.sleep(500);
-									 */
 									
 									p1_pos++;
 									if (p1_pos%10 ==1) {
 										yUp_green();
 										yaxis_counter++;
-										limit+=10;
+										Thread.sleep(500);
+										
+										continue;
 									}
-									if (yaxis_counter%2 != 0 &&p1_pos<=10) skiph();
+									if (yaxis_counter%2 != 0) {
+										skiph();
+									}
+									else if (yaxis_counter%2 == 0) {
+										nskiph();
+									}
 									
-									if (yaxis_counter%2 == 0 && p1_pos>limit) nskiph();
 									Thread.sleep(500);
 									
-									System.out.println(p1_pos);
+									//System.out.println(p1_pos);
 									
 									
 								}
@@ -94,6 +86,7 @@ public class Controller {
 						}
 					};
 					goti_thread.start();
+					
 					if (p1_pos % 10 == 0 ) {
 						
 					}
@@ -114,16 +107,33 @@ public class Controller {
 				}
 				else if (in_p2 !=0) {
 					//-------------------------------
-					Thread goti_thread = new Thread(){
+					tempbutton.setDisable(true);
+					Thread goti_thread2 = new Thread(){
 						
 						public void run() {
 							try {
 								for ( int i  =0 ; i <num ; i++) {
-									//System.out.println(num );
-									skiph_blue();
-									
+									p2_pos++;
+									System.out.println(p2_pos);
+									if (p2_pos%10 ==1) {
+										System.out.println("i am here");
+										yUp_blue();
+										yaxis_counter2++;
+										Thread.sleep(500);
+										
+										continue;
+									}
+									if ((yaxis_counter2)%2 != 0) {
+										skiph_blue();
+									}
+									else if (yaxis_counter2%2 == 0) {
+										nskiph_blue();
+									}
 									
 									Thread.sleep(500);
+									
+									System.out.println(p2_pos);
+									
 									 
 								}
 							} catch (Exception e) {
@@ -132,7 +142,7 @@ public class Controller {
 							tempbutton.setDisable(false);
 						}
 					};
-					goti_thread.start();
+					goti_thread2.start();
 				
 			
 					//-------------------------------
@@ -234,10 +244,25 @@ public class Controller {
 
 
 	}
+	void nskiph_blue(){
+		TranslateTransition giti = new TranslateTransition();
+		giti.setNode(blue);
+		giti.setByX(-34);
+		giti.play();
+
+
+	}
 	@FXML
 	void yUp_green(){
 		TranslateTransition giti = new TranslateTransition();
 		giti.setNode(green);
+		giti.setByY(-45);
+		giti.play();
+
+	}
+	void yUp_blue(){
+		TranslateTransition giti = new TranslateTransition();
+		giti.setNode(blue);
 		giti.setByY(-45);
 		giti.play();
 

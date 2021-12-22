@@ -2,6 +2,8 @@ package application;
 
 import java.util.Random;
 
+import javafx.animation.TranslateTransition;
+
 public class Player {
 	private int id ;
 	private int position;
@@ -34,7 +36,5 @@ public class Player {
 	public int getPosition() {
 		return position;
 	}
-	
-	
 	
 }

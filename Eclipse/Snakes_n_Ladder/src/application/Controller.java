@@ -31,9 +31,9 @@ public class Controller {
 	@FXML
 	private Button tempbutton;
 	@FXML
-	private ImageView green;
+	public ImageView green;
 	@FXML
-	private ImageView blue;
+	public ImageView blue;
 	@FXML
 	private ImageView diceview;
 
@@ -380,4 +380,125 @@ public class Controller {
 		welcom.setScene(login);
 		welcom.show();
 	}
+	public void climb_ladder(int pos,int id){                  //id=1 for green else blue
+		if (pos==3){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(36);
+			giti.setByY(-91);
+			giti.play();
+
+		}
+		else if(pos==7){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByY(-133);
+			giti.play();
+		}
+		else if(pos==12){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(36);
+			giti.setByY(-91);
+			giti.play();
+		}
+		else if(pos==20){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByY(-133);
+			giti.play();
+		}
+		else if(pos==36){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(32);
+			giti.setByY(-44);
+			giti.play();
+		}
+		else if(pos==56){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(-69);
+			giti.setByY(-48);
+			giti.play();
+		}
+		else if(pos==60){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByY(-133);
+			giti.play();
+		}
+		else if(pos==69){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(-35);
+			giti.setByY(-134);
+			giti.play();
+		}
+		else if(pos==75){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByY(-91);
+			giti.play();
+		}
+		else if(pos==78){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(36);
+			giti.setByY(-91);
+			giti.play();
+		}
+
+	}
 }
+

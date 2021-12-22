@@ -560,33 +560,16 @@ public class Controller {
 	}
 	public void climb_snakes(int pos,int id){                  //id=1 for green else blue
 		if (pos==15){
-//			//TranslateTransition giti = new TranslateTransition();
-//			Polyline snake = new Polyline();
-//			PathTransition giti = new PathTransition();
-//			snake.getPoints().addAll(0.0,0.0,
-//					-37.0,17.0,
-//					-12.0,44.0,
-//					-37.0,45.0);
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setDuration(Duration.seconds(2));
-//			giti.setPath(snake);
-//			giti.play();
-
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
-				game.setPositionP1(24);
-				yaxis_counter=3;
+				game.setPositionP1(5);
+				yaxis_counter=1;
 			}
 			else{
 				giti.setNode(blue);
-				game.setPositionP2(24);
-				yaxis_counter2=3;
+				game.setPositionP2(5);
+				yaxis_counter2=1;
 			}
 			giti.setByX(-34);
 			giti.setByY(47);
@@ -598,9 +581,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(2);
+				yaxis_counter=1;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(2);
+				yaxis_counter2=1;
 			}
 			giti.setByY(92);
 			giti.play();
@@ -609,9 +596,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(8);
+				yaxis_counter=1;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(8);
+				yaxis_counter2=1;
 			}
 
 			giti.setByY(133);
@@ -621,9 +612,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(23);
+				yaxis_counter=3;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(23);
+				yaxis_counter2=3;
 			}
 			giti.setByX(-34);
 			giti.setByY(89);
@@ -633,9 +628,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(50);
+				yaxis_counter=5;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(50);
+				yaxis_counter2=5;
 			}
 			giti.setByX(74);
 			giti.setByY(93);
@@ -645,9 +644,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(43);
+				yaxis_counter=5;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(43);
+				yaxis_counter2=5;
 			}
 			giti.setByX(34);
 			giti.setByY(133);
@@ -657,9 +660,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(65);
+				yaxis_counter=7;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(65);
+				yaxis_counter2=7;
 			}
 			giti.setByY(89);
 			giti.play();
@@ -668,9 +675,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(71);
+				yaxis_counter=8;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(71);
+				yaxis_counter2=8;
 			}
 			giti.setByX(33);
 			giti.setByY(90);
@@ -680,9 +691,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(47);
+				yaxis_counter=5;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(47);
+				yaxis_counter2=5;
 			}
 			giti.setByY(222);
 			giti.play();
@@ -691,9 +706,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(82);
+				yaxis_counter=9;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(82);
+				yaxis_counter2=9;
 			}
 			giti.setByX(-37);
 			giti.setByY(47);

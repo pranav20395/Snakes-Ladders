@@ -19,7 +19,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage Stage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
 			Scene scene = new Scene(root,392,568);
 			
 			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
@@ -29,6 +29,7 @@ public class Main extends Application {
 			Image logo = new Image("game.png");
 			Stage.getIcons().add(logo);
 			//Stage.setFullScreen(true);
+
 			Stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

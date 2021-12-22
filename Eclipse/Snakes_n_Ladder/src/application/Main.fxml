@@ -4,6 +4,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
@@ -12,7 +14,6 @@
             <Image url="@Board.png" />
          </image>
       </ImageView>
-      <Button fx:id="tempbutton" layoutX="254.0" layoutY="504.0" mnemonicParsing="false" onAction="#gamePlay" text="Roll" />
       <ImageView fx:id="green" fitHeight="47.0" fitWidth="67.0" layoutX="-19.0" layoutY="457.0">
          <image>
             <Image url="@green-01.png" />
@@ -24,13 +25,28 @@
          </image>
       </ImageView>
       <Button layoutX="303.0" layoutY="481.0" mnemonicParsing="false" text="X" />
-      <Button layoutX="337.0" layoutY="481.0" mnemonicParsing="false"  text="y" />
+      <Button layoutX="337.0" layoutY="481.0" mnemonicParsing="false" text="y" />
       <Button layoutX="301.0" layoutY="517.0" mnemonicParsing="false" onAction="#yUp_green" text="-x" />
-      <Button layoutX="334.0" layoutY="517.0" mnemonicParsing="false"  text="-y" />
+      <Button layoutX="334.0" layoutY="517.0" mnemonicParsing="false" text="-y" />
       <ImageView fx:id="diceview" fitHeight="38.0" fitWidth="37.0" layoutX="179.0" layoutY="500.0">
          <image>
             <Image url="@dice1.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="winpopup" fitHeight="416.0" fitWidth="293.0" layoutX="51.0" layoutY="65.0" opacity="0.0">
+         <image>
+            <Image url="@winn-01.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="greenwon" fill="WHITE" layoutX="141.0" layoutY="259.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GREEN WON" textAlignment="CENTER" wrappingWidth="110.93672180175781">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fx:id="bluewon" fill="WHITE" layoutX="141.0" layoutY="277.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLUE WON" textAlignment="CENTER" wrappingWidth="110.93672180175781">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Button fx:id="replay" layoutX="160.0" layoutY="313.0" mnemonicParsing="false" onAction="#play" opacity="0.0" prefHeight="26.0" prefWidth="74.0" text="Button" />
+      <Button fx:id="tempbutton" layoutX="171.0" layoutY="494.0" mnemonicParsing="false" onAction="#gamePlay" opacity="0.0" prefHeight="47.0" prefWidth="47.0" text="Roll" />
    </children>
 </AnchorPane>

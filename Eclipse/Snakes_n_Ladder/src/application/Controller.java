@@ -37,7 +37,18 @@ public class Controller {
 	@FXML
 	void gamePlay()  {
 			
-		
+			if (p1_pos>=100) {
+				//---------
+				
+				//---------
+				return;
+			}
+			if (p2_pos>=100) {
+				//--------	
+				
+				//---------
+				return;
+			}
 		
 			if (player_turn % 2 == 0 ) {	// for p1
 				System.out.println("green turn");
@@ -49,15 +60,26 @@ public class Controller {
 					in_p1++; 
 				}
 				else if (in_p1!=0){
+					if ( num == 6 ) player_turn--;
+					
+					if (p1_pos+num >100) return;
 					tempbutton.setDisable(true);
 					//-------------------------------
 					Thread goti_thread = new Thread(){
 						
 						public void run() {
+							//if (p1_pos+num >100) return;
 							try {
+								if ((num+p1_pos)==100) {
+									System.out.println("p1 win");
+									
+								}
 								for ( int i  =0 ; i <num ; i++) {
 									
-									
+									if (p1_pos==100) {
+										return;
+										
+									}
 									p1_pos++;
 									if (p1_pos%10 ==1) {
 										yUp_green();
@@ -105,16 +127,24 @@ public class Controller {
 				}
 				else if (in_p2 !=0) {
 					//-------------------------------
+					if ( num == 6 ) player_turn--;
+					;
+					if (p1_pos+num >100) return;
 					tempbutton.setDisable(true);
 					Thread goti_thread2 = new Thread(){
 						
 						public void run() {
 							try {
+								
 								for ( int i  =0 ; i <num ; i++) {
+									if (p2_pos==100) {
+										return;
+										
+									}
 									p2_pos++;
-									System.out.println(p2_pos);
+									//System.out.println(p2_pos);
 									if (p2_pos%10 ==1) {
-										System.out.println("i am here");
+										//System.out.println("i am here");
 										yUp_blue();
 										yaxis_counter2++;
 										Thread.sleep(500);
@@ -130,7 +160,7 @@ public class Controller {
 									
 									Thread.sleep(500);
 									
-									System.out.println(p2_pos);
+									//System.out.println(p2_pos);
 									
 									 
 								}

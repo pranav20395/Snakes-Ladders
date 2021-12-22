@@ -20,7 +20,11 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class Controller {
+	@FXML
+	private ImageView d;
 	private Game game = new Game();
+	@FXML
+	private ImageView arrow;
 	@FXML
 	private Text greenwon;
 	@FXML
@@ -67,6 +71,7 @@ public class Controller {
 
 	@FXML
 	void gamePlay() throws InterruptedException {
+		arrow.setOpacity(0);
 
 
 		if (game.getPosP1() >= 100) {

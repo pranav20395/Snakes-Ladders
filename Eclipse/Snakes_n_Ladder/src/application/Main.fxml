@@ -43,7 +43,6 @@
             <Font name="System Bold" size="18.0" />
          </font></Text>
       <Button fx:id="replay" layoutX="160.0" layoutY="313.0" mnemonicParsing="false" onAction="#play" opacity="0.0" prefHeight="26.0" prefWidth="74.0" text="Button" />
-      <Button fx:id="tempbutton" layoutX="171.0" layoutY="494.0" mnemonicParsing="false" onAction="#gamePlay" opacity="0.0" prefHeight="47.0" prefWidth="47.0" text="Roll" />
       <ImageView fx:id="blueturn" fitHeight="47.0" fitWidth="67.0" layoutX="48.0" layoutY="495.0" opacity="0.0">
          <image>
             <Image url="@blue-01.png" />
@@ -52,6 +51,12 @@
       <ImageView fx:id="greentrun" fitHeight="47.0" fitWidth="67.0" layoutX="47.0" layoutY="495.0" opacity="0.0">
          <image>
             <Image url="@green-01.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="tempbutton" layoutX="171.0" layoutY="494.0" mnemonicParsing="false" onAction="#gamePlay" opacity="0.0" prefHeight="47.0" prefWidth="47.0" text="Roll" />
+      <ImageView fx:id="arrow" fitHeight="70.0" fitWidth="100.0" layoutX="149.0" layoutY="432.0">
+         <image>
+            <Image url="@arrow.gif" />
          </image>
       </ImageView>
    </children>

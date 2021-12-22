@@ -133,8 +133,14 @@ public class Controller {
 
 								//System.out.println(p1_pos);
 
-
+								
 							}
+							
+							//----------------------------
+							
+							 climb_ladder(game.getPosP1(), 1);
+							//----------------------------
+							
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -143,6 +149,8 @@ public class Controller {
 					}
 				};
 				goti_thread.start();
+				
+				
 
 
 				//-------------------------------
@@ -209,6 +217,9 @@ public class Controller {
 
 
 							}
+							//------------------------------
+							climb_ladder(game.getPosP2(), 0);
+							//-------------------------------
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -385,9 +396,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(24);
+				yaxis_counter=3;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(24);
+				yaxis_counter2=3;
 			}
 			giti.setByX(36);
 			giti.setByY(-91);
@@ -398,9 +413,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(34);
+				yaxis_counter=4;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(34);
+				yaxis_counter2=4;
 			}
 			giti.setByY(-133);
 			giti.play();
@@ -409,9 +428,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(31);
+				yaxis_counter=4;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(31);
+				yaxis_counter2=4;
 			}
 			giti.setByX(36);
 			giti.setByY(-91);
@@ -421,9 +444,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(41);
+				yaxis_counter=5;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(41);
+				yaxis_counter2=5;
 			}
 			giti.setByY(-133);
 			giti.play();
@@ -432,9 +459,14 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(46);
+				yaxis_counter=5;
+				
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(46);
+				yaxis_counter2=5;
 			}
 			giti.setByX(32);
 			giti.setByY(-44);
@@ -444,21 +476,30 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(63);
+				yaxis_counter=7;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(63);
+				yaxis_counter2=7;
 			}
 			giti.setByX(-69);
 			giti.setByY(-48);
 			giti.play();
+			
 		}
 		else if(pos==60){
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(81);
+				yaxis_counter=9;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(81);
+				yaxis_counter2=9;
 			}
 			giti.setByY(-133);
 			giti.play();
@@ -467,9 +508,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(93);
+				yaxis_counter=10;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(93);
+				yaxis_counter2=10;
 			}
 			giti.setByX(-35);
 			giti.setByY(-134);
@@ -479,9 +524,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(95);
+				yaxis_counter=10;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(95);
+				yaxis_counter2=5;
 			}
 			giti.setByY(-91);
 			giti.play();
@@ -490,9 +539,13 @@ public class Controller {
 			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
+				game.setPositionP1(97);
+				yaxis_counter=10;
 			}
 			else{
 				giti.setNode(blue);
+				game.setPositionP2(97);
+				yaxis_counter2=10;
 			}
 			giti.setByX(36);
 			giti.setByY(-91);

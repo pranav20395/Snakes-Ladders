@@ -21,6 +21,12 @@ public class Game {
 	public void increasePosP2() {
 		this.p2.increaseId();
 	}
+	public void setPositionP1(int i) {
+		this.p1.setPosition(i);
+	}
+	public void setPositionP2(int i) {
+		this.p2.setPosition(i);
+	}
 	public int getPosP1() {
 		return this.p1.getPosition();
 	}

@@ -13,6 +13,7 @@ public class Ladder {
 		this.head = head;
 		this.tail = tail;
 	}
+	
 	void addLadder(int head , int tail) {
 		this.setHead(new Cell(head));
 		this.setTail(new Cell(tail));

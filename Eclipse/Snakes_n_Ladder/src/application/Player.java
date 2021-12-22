@@ -28,7 +28,9 @@ public class Player {
 			}
 		return num;
 	}
-	
+	public void setPosition(int position) {
+		this.position = position;
+	}
 	
 	public void increaseId() {
 		this.position++;

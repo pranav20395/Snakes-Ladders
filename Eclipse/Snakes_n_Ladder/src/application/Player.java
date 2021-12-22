@@ -1,5 +1,7 @@
 package application;
 
+import javafx.animation.TranslateTransition;
+
 import java.util.Random;
 
 import javafx.animation.TranslateTransition;

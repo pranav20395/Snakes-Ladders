@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+import javafx.animation.PathTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,8 +14,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Polyline;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class Controller {
 	private Game game = new Game();
@@ -139,6 +142,7 @@ public class Controller {
 							//----------------------------
 							
 							 climb_ladder(game.getPosP1(), 1);
+							 climb_snakes(game.getPosP1(), 1);
 							//----------------------------
 							
 						} catch (Exception e) {
@@ -219,6 +223,7 @@ public class Controller {
 							}
 							//------------------------------
 							climb_ladder(game.getPosP2(), 0);
+							climb_snakes(game.getPosP2(), 0);
 							//-------------------------------
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -553,5 +558,132 @@ public class Controller {
 		}
 
 	}
+	public void climb_snakes(int pos,int id){                  //id=1 for green else blue
+		if (pos==15){
+			//TranslateTransition giti = new TranslateTransition();
+			Polyline snake = new Polyline();
+			snake.getPoints().addAll(215.0,397.0,
+					179.0,418.0,
+					206.0,445.0,
+					179.0,445.0);
+			PathTransition giti = new PathTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setDuration(Duration.seconds(2));
+			giti.setPath(snake);
+			giti.play();
+
+		}
+//		else if(pos==7){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByY(-133);
+//			giti.play();
+//		}
+//		else if(pos==12){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByX(36);
+//			giti.setByY(-91);
+//			giti.play();
+//		}
+//		else if(pos==20){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByY(-133);
+//			giti.play();
+//		}
+//		else if(pos==36){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByX(32);
+//			giti.setByY(-44);
+//			giti.play();
+//		}
+//		else if(pos==56){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByX(-69);
+//			giti.setByY(-48);
+//			giti.play();
+//		}
+//		else if(pos==60){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByY(-133);
+//			giti.play();
+//		}
+//		else if(pos==69){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByX(-35);
+//			giti.setByY(-134);
+//			giti.play();
+//		}
+//		else if(pos==75){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByY(-91);
+//			giti.play();
+//		}
+//		else if(pos==78){
+//			TranslateTransition giti = new TranslateTransition();
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setByX(36);
+//			giti.setByY(-91);
+//			giti.play();
+//		}
+
+	}
+
 }
 

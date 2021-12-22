@@ -4,17 +4,13 @@ import java.util.Random;
 
 public class Player {
 	private int id ;
-	private Cell position;
+	private int position;
 	
 	Player(int i){
 		this.id = i ;
-		position = new Cell(0);
+		position=1;
 	}
-	
-	void play() {
-		int dice_num = diceRoll();
-		position.moVe(dice_num);
-	}
+
 	
 	public int diceRoll() {
 		 int num  =  -1;
@@ -31,10 +27,11 @@ public class Player {
 		return num;
 	}
 	
-	public void setPosition(Cell position) {
-		this.position = position;
+	
+	public void increaseId() {
+		this.position++;
 	}
-	public Cell getPosition() {
+	public int getPosition() {
 		return position;
 	}
 	

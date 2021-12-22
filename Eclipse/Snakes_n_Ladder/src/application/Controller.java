@@ -17,6 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Controller {
+	private Game game = new Game();
 	@FXML
 	private Text greenwon;
 	@FXML
@@ -55,18 +56,19 @@ public class Controller {
 	private Stage welcom;
 	private Scene login;
 	private Parent root;
+	int ladder[] ={24,3,34,7,31,12,41,20,46,36,63,56,81,60,97,78,95,75,93,69};
 
 	@FXML
 	void gamePlay() {
 
 
-		if (p1_pos >= 100) {
+		if (game.getPosP1() >= 100) {
 			//---------
 
 			//---------
 			return;
 		}
-		if (p2_pos >= 100) {
+		if (game.getPosP2() >= 100) {
 			//--------
 
 			//---------
@@ -87,7 +89,7 @@ public class Controller {
 			} else if (in_p1 != 0) {
 				if (num == 6) player_turn--;
 
-				if (p1_pos + num > 100) {
+				if (game.getPosP1() + num > 100) {
 					player_turn++;
 					return;
 				}
@@ -98,21 +100,23 @@ public class Controller {
 					public void run() {
 						//if (p1_pos+num >100) return;
 						try {
-							if ((num + p1_pos) == 100) {
+							if ((num + game.getPosP1()) == 100) {
 								System.out.println("p1 win");
 								show_winpage(2);
 
 							}
 							for (int i = 0; i < num; i++) {
 
-								if (p1_pos == 100) {
+								if (game.getPosP1() == 100) {
 									System.out.println("p1 win");
 									show_winpage(2);
 									return;
 
 								}
 								p1_pos++;
-								if (p1_pos % 10 == 1) {
+								game.increasePosP1();
+								System.out.println(game.getPosP1());
+								if (game.getPosP1() % 10 == 1) {
 									yUp_green();
 									yaxis_counter++;
 									Thread.sleep(500);
@@ -134,6 +138,7 @@ public class Controller {
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
+						
 						tempbutton.setDisable(false);
 					}
 				};
@@ -159,7 +164,7 @@ public class Controller {
 				//-------------------------------
 				if (num == 6) player_turn--;
 				
-				if (p2_pos + num > 100) {
+				if (game.getPosP2() + num > 100) {
 					player_turn++;
 					return;
 				}
@@ -168,22 +173,23 @@ public class Controller {
 
 					public void run() {
 						try {
-							if ((num + p1_pos) == 100) {
+							if ((num + game.getPosP2()) == 100) {
 								System.out.println("p2 win");
 								show_winpage(0);
 
 							}
 
 							for (int i = 0; i < num; i++) {
-								if (p2_pos == 100) {
+								if (game.getPosP2() == 100) {
 									System.out.println("p2 win");
 									show_winpage(0);
 									return;
 
 								}
-								p2_pos++;
+								game.increasePosP2();
+								//p2_pos++;
 								//System.out.println(p2_pos);
-								if (p2_pos % 10 == 1) {
+								if (game.getPosP2() % 10 == 1) {
 									//System.out.println("i am here");
 									yUp_blue();
 									yaxis_counter2++;

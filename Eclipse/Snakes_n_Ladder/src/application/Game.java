@@ -15,11 +15,17 @@ public class Game {
 		board = new Board();
 		
 		}
+	public void increasePosP1() {
+		this.p1.increaseId();
+	}
+	public void increasePosP2() {
+		this.p2.increaseId();
+	}
 	public int getPosP1() {
-		return this.getP1().getPosition().getId();
+		return this.p1.getPosition();
 	}
 	public int getPosP2() {
-		return this.getP2().getPosition().getId();
+		return this.p2.getPosition();
 	}
 	public Player getP1() {
 		return p1;

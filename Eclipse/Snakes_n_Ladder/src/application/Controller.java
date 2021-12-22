@@ -560,128 +560,145 @@ public class Controller {
 	}
 	public void climb_snakes(int pos,int id){                  //id=1 for green else blue
 		if (pos==15){
-			//TranslateTransition giti = new TranslateTransition();
-			Polyline snake = new Polyline();
-			snake.getPoints().addAll(215.0,397.0,
-					179.0,418.0,
-					206.0,445.0,
-					179.0,445.0);
-			PathTransition giti = new PathTransition();
+//			//TranslateTransition giti = new TranslateTransition();
+//			Polyline snake = new Polyline();
+//			PathTransition giti = new PathTransition();
+//			snake.getPoints().addAll(0.0,0.0,
+//					-37.0,17.0,
+//					-12.0,44.0,
+//					-37.0,45.0);
+//			if(id==1){
+//				giti.setNode(green);
+//			}
+//			else{
+//				giti.setNode(blue);
+//			}
+//			giti.setDuration(Duration.seconds(2));
+//			giti.setPath(snake);
+//			giti.play();
+
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+				game.setPositionP1(24);
+				yaxis_counter=3;
+			}
+			else{
+				giti.setNode(blue);
+				game.setPositionP2(24);
+				yaxis_counter2=3;
+			}
+			giti.setByX(-34);
+			giti.setByY(47);
+			giti.play();
+
+
+		}
+		else if(pos==22){
+			TranslateTransition giti = new TranslateTransition();
 			if(id==1){
 				giti.setNode(green);
 			}
 			else{
 				giti.setNode(blue);
 			}
-			giti.setDuration(Duration.seconds(2));
-			giti.setPath(snake);
+			giti.setByY(92);
 			giti.play();
-
 		}
-//		else if(pos==7){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByY(-133);
-//			giti.play();
-//		}
-//		else if(pos==12){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByX(36);
-//			giti.setByY(-91);
-//			giti.play();
-//		}
-//		else if(pos==20){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByY(-133);
-//			giti.play();
-//		}
-//		else if(pos==36){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByX(32);
-//			giti.setByY(-44);
-//			giti.play();
-//		}
-//		else if(pos==56){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByX(-69);
-//			giti.setByY(-48);
-//			giti.play();
-//		}
-//		else if(pos==60){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByY(-133);
-//			giti.play();
-//		}
-//		else if(pos==69){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByX(-35);
-//			giti.setByY(-134);
-//			giti.play();
-//		}
-//		else if(pos==75){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByY(-91);
-//			giti.play();
-//		}
-//		else if(pos==78){
-//			TranslateTransition giti = new TranslateTransition();
-//			if(id==1){
-//				giti.setNode(green);
-//			}
-//			else{
-//				giti.setNode(blue);
-//			}
-//			giti.setByX(36);
-//			giti.setByY(-91);
-//			giti.play();
-//		}
+		else if(pos==33){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+
+			giti.setByY(133);
+			giti.play();
+		}
+		else if(pos==44){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(-34);
+			giti.setByY(89);
+			giti.play();
+		}
+		else if(pos==68){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(74);
+			giti.setByY(93);
+			giti.play();
+		}
+		else if(pos==79){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(34);
+			giti.setByY(133);
+			giti.play();
+		}
+		else if(pos==85){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByY(89);
+			giti.play();
+		}
+		else if(pos==92){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(33);
+			giti.setByY(90);
+			giti.play();
+		}
+		else if(pos==94){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByY(222);
+			giti.play();
+		}
+		else if(pos==98){
+			TranslateTransition giti = new TranslateTransition();
+			if(id==1){
+				giti.setNode(green);
+			}
+			else{
+				giti.setNode(blue);
+			}
+			giti.setByX(-37);
+			giti.setByY(47);
+			giti.play();
+		}
 
 	}
 

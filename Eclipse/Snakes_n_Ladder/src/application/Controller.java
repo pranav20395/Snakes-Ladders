@@ -29,6 +29,10 @@ public class Controller {
 	private ImageView winpopup;
 	@FXML
 	public Button replay;
+	@FXML
+	private ImageView greentrun;
+	@FXML
+	private ImageView blueturn;
 
 
 	@FXML
@@ -62,7 +66,7 @@ public class Controller {
 	int ladder[] ={24,3,34,7,31,12,41,20,46,36,63,56,81,60,97,78,95,75,93,69};
 
 	@FXML
-	void gamePlay() {
+	void gamePlay() throws InterruptedException {
 
 
 		if (game.getPosP1() >= 100) {
@@ -239,8 +243,19 @@ public class Controller {
 		}
 
 		player_turn++;
+		if (player_turn % 2 == 0){
+			blueturn.setOpacity(0);
+			greentrun.setOpacity(1);
+		}
+		if (player_turn % 2 != 0) {
+			greentrun.setOpacity(0);
+			blueturn.setOpacity(1);
+		}
 
-	}
+
+
+
+		}
 	void show_winpage(int i){
 		winpopup.setOpacity(1);
 		if (i ==0 ){

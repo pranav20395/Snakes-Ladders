@@ -14,15 +14,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.Polyline;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class Controller {
-	@FXML
-	private ImageView d;
+
 	private Game game = new Game();
+	@FXML
+	private CubicCurve s98;
 	@FXML
 	private ImageView arrow;
 	@FXML

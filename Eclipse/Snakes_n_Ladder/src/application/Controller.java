@@ -87,7 +87,10 @@ public class Controller {
 			} else if (in_p1 != 0) {
 				if (num == 6) player_turn--;
 
-				if (p1_pos + num > 100) return;
+				if (p1_pos + num > 100) {
+					player_turn++;
+					return;
+				}
 				tempbutton.setDisable(true);
 				//-------------------------------
 				Thread goti_thread = new Thread() {
@@ -103,6 +106,8 @@ public class Controller {
 							for (int i = 0; i < num; i++) {
 
 								if (p1_pos == 100) {
+									System.out.println("p1 win");
+									show_winpage(2);
 									return;
 
 								}
@@ -148,21 +153,31 @@ public class Controller {
 			}
 
 			if (in_p2 == 0 && num == 1) {
-				bboard(); //green gioti for p1
+				bboard(); //blue gioti for p1
 				in_p2++;
 			} else if (in_p2 != 0) {
 				//-------------------------------
 				if (num == 6) player_turn--;
-				;
-				if (p1_pos + num > 100) return;
+				
+				if (p2_pos + num > 100) {
+					player_turn++;
+					return;
+				}
 				tempbutton.setDisable(true);
 				Thread goti_thread2 = new Thread() {
 
 					public void run() {
 						try {
+							if ((num + p1_pos) == 100) {
+								System.out.println("p2 win");
+								show_winpage(0);
+
+							}
 
 							for (int i = 0; i < num; i++) {
 								if (p2_pos == 100) {
+									System.out.println("p2 win");
+									show_winpage(0);
 									return;
 
 								}

@@ -87,9 +87,7 @@ public class Controller {
 					};
 					goti_thread.start();
 					
-					if (p1_pos % 10 == 0 ) {
-						
-					}
+					
 			
 					//-------------------------------
 				}

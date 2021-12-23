@@ -2,6 +2,7 @@ package application;
 	
 import java.util.Objects;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -14,6 +15,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage Stage) {
 		try {
+			
 			Parent root = FXMLLoader.load(getClass().getResource("Hellfire.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());

@@ -3,10 +3,12 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.CubicCurve;
 import javafx.scene.text.Text;
 
 public class Controller implements Initializable {
@@ -14,11 +16,13 @@ public class Controller implements Initializable {
 	Button button;
 	@FXML
 	Text txt;
-	
+	@FXML
+	CubicCurve c;
 	
 	@FXML
 	void Display(MouseEvent e) {
 		txt.setText("X->"+ e.getX() + " y-> "+e.getY());
+		
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

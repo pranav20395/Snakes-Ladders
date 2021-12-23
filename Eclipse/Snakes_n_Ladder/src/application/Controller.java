@@ -5,6 +5,7 @@ import java.util.*;
 
 import javafx.animation.PathTransition;
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,7 @@ public class Controller {
 
 	private Game game = new Game();
 	@FXML
-	private CubicCurve s98;
+	private ImageView doom;
 	@FXML
 	private ImageView arrow;
 	@FXML
@@ -74,6 +75,27 @@ public class Controller {
 	@FXML
 	void gamePlay() throws InterruptedException {
 		arrow.setOpacity(0);
+		Thread w = new Thread() {
+			public void run() {
+				for(int i =0 ; i<5 ; i++){
+					doom.setOpacity(1);
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					doom.setOpacity(0);
+				}
+				
+				
+			}
+		};
+		w.start();
+		
+		doom.setOpacity(0);
+		
+		
 
 
 		if (game.getPosP1() >= 100) {
@@ -93,6 +115,7 @@ public class Controller {
 			System.out.println("green turn");
 			try {
 				dice();
+				System.out.println(num);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -114,6 +137,7 @@ public class Controller {
 					public void run() {
 						//if (p1_pos+num >100) return;
 						try {
+							
 							if ((num + game.getPosP1()) == 100) {
 								System.out.println("p1 win");
 								show_winpage(2);
@@ -129,7 +153,7 @@ public class Controller {
 								}
 								p1_pos++;
 								game.increasePosP1();
-								System.out.println(game.getPosP1());
+								//System.out.println(game.getPosP1());
 								if (game.getPosP1() % 10 == 1) {
 									yUp_green();
 									yaxis_counter++;
@@ -139,6 +163,7 @@ public class Controller {
 								}
 								if (yaxis_counter % 2 != 0) {
 									skiph();
+									
 								} else if (yaxis_counter % 2 == 0) {
 									nskiph();
 								}
@@ -176,6 +201,7 @@ public class Controller {
 			System.out.println("blue turn");
 			try {
 				dice();
+				System.out.println(num);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -305,14 +331,20 @@ public class Controller {
 
 
 	}
-
+	
 
 	@FXML
 	void dice() throws InterruptedException {
+		
+
 		Random ran = new Random();
 		num = ran.nextInt(6) + 1;
 		File f = new File("src/application/dice" + num + ".png");
 		diceview.setImage(new Image(f.toURI().toString()));
+		
+		
+		
+		
 
 		//System.out.println("--"+num+"--");
 	}

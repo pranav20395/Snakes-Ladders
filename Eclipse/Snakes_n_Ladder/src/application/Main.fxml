@@ -4,7 +4,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.CubicCurve?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -54,12 +53,17 @@
             <Image url="@green-01.png" />
          </image>
       </ImageView>
+   <ImageView fx:id="doom" fitHeight="39.0" fitWidth="42.0" layoutX="173.0" layoutY="499.0" opacity="0.0">
+         <image>
+            <Image url="@2.gif" />
+         </image>
+         
+      </ImageView>
       <Button fx:id="tempbutton" layoutX="171.0" layoutY="494.0" mnemonicParsing="false" onAction="#gamePlay" opacity="0.0" prefHeight="47.0" prefWidth="47.0" text="Roll" />
       <ImageView fx:id="arrow" fitHeight="70.0" fitWidth="100.0" layoutX="149.0" layoutY="432.0">
          <image>
             <Image url="@arrow.gif" />
          </image>
       </ImageView>
-      <CubicCurve fx:id="s98" controlX1="-189.3999786376953" controlX2="-25.399978637695312" controlY1="-44.60000228881836" controlY2="-0.600006103515625" endX="-118.20002746582031" endY="-11.0" fill="DODGERBLUE" layoutX="193.0" layoutY="107.0" opacity="0.0" startX="-84.20002746582031" startY="-62.999996185302734" stroke="BLACK" />
    </children>
 </AnchorPane>

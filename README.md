@@ -1,2 +1,2 @@
-# AP_Project
-this is a college assignment.
+# JAVA FX
+THis is a games developed with JAVAFX
